@@ -11,7 +11,7 @@
     <!-- Open Graph -->
     <meta property="og:title" content={data.meta.openGraph.title} />
     <meta property="og:description" content={data.meta.openGraph.description} />
-    <meta property="og:image" content={data.meta.openGraph.images[0]} />
+    <meta property="og:image" content={data.meta.openGraph.image} />
     <meta property="og:type" content={data.meta.openGraph.type} />
     <meta property="og:url" content={data.meta.openGraph.url} />
 
@@ -20,7 +20,7 @@
     <meta name="twitter:creator" content={data.meta.twitter.creator} />
     <meta name="twitter:title" content={data.meta.twitter.title} />
     <meta name="twitter:description" content={data.meta.twitter.description} />
-    <meta name="twitter:image" content={data.meta.twitter.images[0]} />
+    <meta name="twitter:image" content={data.meta.twitter.image} />
 </svelte:head>
 
 <slot />
