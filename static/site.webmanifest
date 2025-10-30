@@ -1,0 +1,27 @@
+{
+    "name": "Abdulkhafizov07",
+    "short_name": "Abdulkhafizov07",
+    "description": "For you, all lives are created equal. That's why I came back to life. But you've finally come to realize it now, haven't you? Only one thing is equal for all, and that is death.",
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#000000",
+    "theme_color": "#000000",
+    "icons": [
+        {
+            "src": "/assets/favicon-48.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/favicon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/favicon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
