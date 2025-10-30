@@ -9,7 +9,6 @@
             muted
             playsinline
             preload="auto"
-            poster="/assets/background-preview.jpg"
             class="w-full h-full object-cover"
         >
             <!-- Full HD for large screens -->
