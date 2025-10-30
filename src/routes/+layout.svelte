@@ -5,6 +5,7 @@
 </script>
 
 <svelte:head>
+    <link rel="icon" href={data.meta.icon} />
     <title>{data.meta.title.default}</title>
     <meta name="description" content={data.meta.description} />
 
