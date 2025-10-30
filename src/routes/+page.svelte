@@ -1,3 +1,18 @@
+<script lang="ts">
+    import { onMount } from "svelte";
+
+    onMount(() => {
+        const mainLoader = document.getElementById("main-loader");
+
+        setTimeout(() => {
+            if (mainLoader) {
+                mainLoader.style.opacity = "0";
+                mainLoader.style.visibility = "hidden";
+            }
+        }, 500);
+    });
+</script>
+
 <section id="page">
     <div
         class="flex w-full h-screen items-center justify-center bg-black overflow-hidden"
