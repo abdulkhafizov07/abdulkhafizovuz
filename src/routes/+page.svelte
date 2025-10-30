@@ -11,8 +11,18 @@
             preload="auto"
             class="w-full h-full object-cover"
         >
-            <source src="/assets/background-optimized.mp4" type="video/mp4" />
-            <source src="/assets/background-optimized.webm" type="video/webm" />
+            <!-- Full HD for large screens -->
+            <source
+                src="/assets/background-1080p.mp4"
+                type="video/mp4"
+                media="(min-width: 1200px)"
+            />
+            <!-- HD for smaller screens -->
+            <source
+                src="/assets/background-720p.mp4"
+                type="video/mp4"
+                media="(max-width: 1199px)"
+            />
             <track kind="captions" />
             Your browser does not support the video tag.
         </video>
