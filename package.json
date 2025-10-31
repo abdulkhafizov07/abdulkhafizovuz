@@ -42,5 +42,8 @@
 		"onlyBuiltDependencies": [
 			"esbuild"
 		]
+	},
+	"dependencies": {
+		"@icons-pack/svelte-simple-icons": "^6.5.0"
 	}
 }
