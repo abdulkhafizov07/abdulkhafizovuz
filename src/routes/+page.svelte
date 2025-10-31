@@ -13,17 +13,17 @@
                 mainLoader.style.opacity = "0";
                 mainLoader.style.visibility = "hidden";
             }
-        }, 0);
+        }, 1800);
 
-        // setTimeout(() => {
-        //     if (audio) {
-        //         audio
-        //             .play()
-        //             .catch((err) =>
-        //                 console.log("Audio autoplay blocked:", err)
-        //             );
-        //     }
-        // }, 2140);
+        setTimeout(() => {
+            if (audio) {
+                audio
+                    .play()
+                    .catch((err) =>
+                        console.log("Audio autoplay blocked:", err)
+                    );
+            }
+        }, 2140);
     });
 </script>
 
