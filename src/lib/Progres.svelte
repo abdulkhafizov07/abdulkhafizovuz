@@ -20,14 +20,14 @@
             icon: SiJavascript,
             name: "JavaScript",
             category: "programming language",
-            progress: 63,
+            progress: 99,
         },
         {
             color: "bg-blue-500",
             icon: SiTypescript,
             name: "TypeScript",
             category: "programming language",
-            progress: 84,
+            progress: 88,
         },
         {
             color: "bg-sky-500",
@@ -41,7 +41,7 @@
             icon: SiPython,
             name: "Python",
             category: "programming language",
-            progress: 68,
+            progress: 78,
         },
     ];
     const DisplaySkills = Skills.sort((a, b) => b.progress - a.progress);
