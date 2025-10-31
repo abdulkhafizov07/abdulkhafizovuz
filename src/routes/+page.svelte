@@ -2,6 +2,7 @@
     import { onMount } from "svelte";
     import Profile from "../lib/Profile.svelte";
     import Location from "../lib/Location.svelte";
+    import Progres from "../lib/Progres.svelte";
 
     let audio: HTMLAudioElement;
 
@@ -13,17 +14,17 @@
                 mainLoader.style.opacity = "0";
                 mainLoader.style.visibility = "hidden";
             }
-        }, 1800);
+        }, 100);
 
-        setTimeout(() => {
-            if (audio) {
-                audio
-                    .play()
-                    .catch((err) =>
-                        console.log("Audio autoplay blocked:", err)
-                    );
-            }
-        }, 2140);
+        // setTimeout(() => {
+        //     if (audio) {
+        //         audio
+        //             .play()
+        //             .catch((err) =>
+        //                 console.log("Audio autoplay blocked:", err)
+        //             );
+        //     }
+        // }, 2140);
     });
 </script>
 
@@ -34,4 +35,5 @@
 <div class="flex flex-col gap-4">
     <Location />
     <Profile />
+    <Progres />
 </div>
