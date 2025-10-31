@@ -13,7 +13,8 @@
             icon: SiHtml5,
             name: "HTML",
             category: "markup language",
-            progress: 73,
+            progress: 100,
+            weight: 1,
         },
         {
             color: "bg-yellow-500",
@@ -21,6 +22,7 @@
             name: "JavaScript",
             category: "programming language",
             progress: 99,
+            weight: 5,
         },
         {
             color: "bg-blue-500",
@@ -28,23 +30,28 @@
             name: "TypeScript",
             category: "programming language",
             progress: 88,
+            weight: 10,
         },
         {
             color: "bg-sky-500",
             icon: SiCss,
             name: "CSS",
             category: "stylesheet",
-            progress: 63,
+            progress: 97,
+            weight: 2,
         },
         {
             color: "bg-blue-400",
             icon: SiPython,
             name: "Python",
             category: "programming language",
-            progress: 78,
+            progress: 80,
+            weight: 15,
         },
     ];
-    const DisplaySkills = Skills.sort((a, b) => b.progress - a.progress);
+    const DisplaySkills = Skills.sort(
+        (a, b) => b.progress + b.weight * 10 - (a.progress + a.weight * 10)
+    );
 
     let allSkills = $state(false);
 </script>
