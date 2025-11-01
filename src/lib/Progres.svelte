@@ -49,49 +49,62 @@
             weight: 15,
         },
     ];
+
     const DisplaySkills = Skills.sort(
         (a, b) => b.progress + b.weight * 10 - (a.progress + a.weight * 10)
     );
 
-    let allSkills = $state(false);
+    let allSkills = false;
 </script>
 
 <div
-    class="card group w-full border border-zinc-700 bg-black/10 hover:bg-black/60 backdrop-blur-3xl rounded-2xl select-none transition-colors duration-200 ease-in"
+    class="card w-full border border-zinc-700 bg-black/10 hover:bg-black/60 backdrop-blur-3xl rounded-2xl select-none transition-colors duration-200 ease-in"
 >
-    <div class="card-body p-4">
-        <h3 class="card-title">Skills</h3>
+    <div class="card-body p-6">
+        <h3 class="card-title text-lg font-bold mb-4">Skills</h3>
 
-        <ul class="list">
+        <ul class="flex flex-col gap-4">
             {#each DisplaySkills.slice(0, allSkills ? DisplaySkills.length : 3) as item}
-                <li class="list-row items-center">
-                    <div
-                        class={"w-12 aspect-square flex items-center justify-center " +
-                            item.color}
-                    >
-                        <item.icon />
-                    </div>
-                    <div>
-                        <div>{item.name}</div>
-                        <div class="text-xs uppercase font-semibold opacity-60">
-                            {item.category}
+                <li
+                    class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 p-2"
+                >
+                    <div class="flex items-center gap-3">
+                        <div
+                            class={"w-12 h-12 flex items-center justify-center rounded-md " +
+                                item.color}
+                        >
+                            <item.icon />
+                        </div>
+                        <div>
+                            <div class="font-semibold">{item.name}</div>
+                            <div
+                                class="text-xs uppercase font-semibold opacity-60"
+                            >
+                                {item.category}
+                            </div>
                         </div>
                     </div>
-                    <div class="space-x-2">
+
+                    <div class="flex items-center gap-2 w-full sm:w-auto">
                         <progress
-                            class="progress w-56"
+                            class="progress w-full sm:w-56"
                             value={item.progress}
                             max="100"
                         ></progress>
-                        <span>{item.progress}%</span>
+                        <span class="text-sm">{item.progress}%</span>
                     </div>
                 </li>
             {/each}
         </ul>
 
         {#if !allSkills}
-            <div class="flex justify-center">
-                <button onclick={() => (allSkills = true)}>Show all</button>
+            <div class="flex justify-center mt-4">
+                <button
+                    class="px-4 py-2 text-sm font-semibold rounded-md border border-zinc-700 hover:bg-zinc-800 transition"
+                    on:click={() => (allSkills = true)}
+                >
+                    Show all
+                </button>
             </div>
         {/if}
     </div>
