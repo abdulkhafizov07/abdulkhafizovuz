@@ -58,7 +58,7 @@
 </script>
 
 <div
-    class="card w-full border border-zinc-700 bg-black/10 hover:bg-black/60 backdrop-blur-3xl rounded-2xl select-none transition-colors duration-200 ease-in"
+    class="card group w-full border border-zinc-200 dark:border-zinc-700 bg-white/70 dark:bg-black/10 hover:bg-white/20 dark:hover:bg-black/60 backdrop-blur-3xl rounded-2xl select-none transition-colors duration-200 ease-in"
 >
     <div class="card-body p-6">
         <h3 class="card-title text-lg font-bold mb-4">Skills</h3>
@@ -70,7 +70,7 @@
                 >
                     <div class="flex items-center gap-3">
                         <div
-                            class={"w-12 h-12 flex items-center justify-center rounded-md " +
+                            class={"w-12 h-12 text-white flex items-center justify-center rounded-md " +
                                 item.color}
                         >
                             <item.icon />
@@ -100,7 +100,7 @@
         {#if !allSkills}
             <div class="flex justify-center mt-4">
                 <button
-                    class="px-4 py-2 text-sm font-semibold rounded-md border border-zinc-700 hover:bg-zinc-800 transition"
+                    class="px-4 py-2 text-sm font-semibold rounded-md border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition"
                     on:click={() => (allSkills = true)}
                 >
                     Show all

@@ -1,5 +1,5 @@
 <div
-    class="card group w-full border border-zinc-700 bg-black/10 hover:bg-black/60 backdrop-blur-3xl rounded-2xl select-none transition-colors duration-200 ease-in"
+    class="card group w-full border border-zinc-200 dark:border-zinc-700 bg-white/60 dark:bg-black/10 hover:bg-white/20 dark:hover:bg-black/60 backdrop-blur-3xl rounded-2xl select-none transition-colors duration-200 ease-in"
 >
     <div class="card-body p-4">
         <div class="breadcrumbs text-sm">
@@ -15,7 +15,7 @@
                             ><svg
                                 stroke="none"
                                 viewBox="0 0 48 48"
-                                class="h-4 w-4 fill-white"
+                                class="h-4 w-4 fill-current"
                                 xmlns="http://www.w3.org/2000/svg"
                             >
                                 <path d="M0 0h48v48H0z" fill="none" />

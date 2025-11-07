@@ -80,6 +80,92 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
         rel="stylesheet"
     />
+
+    <style>
+        :root {
+            --loader-color: rgb(0, 0, 0);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --loader-color: rgb(255, 255, 255);
+            }
+        }
+
+        .loader {
+            width: 64px;
+            aspect-ratio: 1;
+            display: grid;
+            border-radius: 50%;
+            background:
+                linear-gradient(
+                        0deg,
+                        var(--loader-color) 30%,
+                        rgba(0, 0, 0, 0) 0 70%,
+                        var(--loader-color) 0
+                    )
+                    50% / 8% 100%,
+                linear-gradient(
+                        90deg,
+                        var(--loader-color) 30%,
+                        rgba(0, 0, 0, 0) 0 70%,
+                        var(--loader-color) 0
+                    )
+                    50% / 100% 8%;
+            background-repeat: no-repeat;
+            animation: l23 2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+
+        .loader::before,
+        .loader::after {
+            content: "";
+            grid-area: 1/1;
+            border-radius: 50%;
+            background: inherit;
+            transform: rotate(30deg);
+        }
+        .loader::after {
+            transform: rotate(60deg);
+        }
+        @keyframes l23 {
+            100% {
+                transform: rotate(1turn);
+            }
+        }
+    </style>
 </svelte:head>
 
-<slot />
+<div
+    id="main-loader"
+    class="fixed top-0 left-0 w-full h-screen flex items-center justify-center bg-white dark:bg-black z-99"
+>
+    <div class="loader dark:dark"></div>
+</div>
+
+<div id="page">
+    <div
+        class="flex w-full h-screen items-center justify-center bg-white dark:bg-black overflow-hidden"
+        id="background"
+    >
+        <video
+            autoplay
+            loop
+            muted
+            playsinline
+            preload="auto"
+            class="w-full h-full object-cover opacity-60"
+        >
+            <source src="/assets/background.webm" type="video/mp4" />
+            <track kind="captions" />
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div
+        class="fixed top-0 left-0 w-full max-h-screen overflow-y-auto py-12 z-10"
+    >
+        <div id="container" class="mx-auto p-4">
+            <slot />
+        </div>
+    </div>
+</div>
