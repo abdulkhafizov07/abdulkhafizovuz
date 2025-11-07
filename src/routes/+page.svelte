@@ -32,7 +32,7 @@
     <audio bind:this={audio} src="/assets/soft-startup.mp3"></audio>
 </div>
 
-<div class="flex flex-col gap-4">
+<div class="flex flex-col gap-4 dark">
     <Location />
     <Profile />
     <Progres />
