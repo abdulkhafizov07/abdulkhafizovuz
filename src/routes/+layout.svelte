@@ -1,7 +1,40 @@
 <script lang="ts">
+    import { afterUpdate, onMount } from "svelte";
+
     import "../app.css";
+
     export let data;
     const meta = data.meta;
+
+    let videoSrc = "/assets/background.webm";
+    let videoEl: HTMLVideoElement | null = null;
+
+    function updateThemeMedia(e?: MediaQueryListEvent) {
+        const isDark = e
+            ? e.matches
+            : window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+        videoSrc = isDark
+            ? "/assets/background.webm"
+            : "/assets/background-light.mp4";
+    }
+
+    onMount(() => {
+        const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+        mediaQuery.addEventListener("change", updateThemeMedia);
+
+        updateThemeMedia();
+
+        return () => {
+            mediaQuery.removeEventListener("change", updateThemeMedia);
+        };
+    });
+
+    afterUpdate(() => {
+        if (videoEl) {
+            videoEl.load();
+        }
+    });
 </script>
 
 <svelte:head>
@@ -148,14 +181,18 @@
         id="background"
     >
         <video
+            bind:this={videoEl}
             autoplay
             loop
             muted
             playsinline
             preload="auto"
-            class="w-full h-full object-cover opacity-60"
+            class={`w-full h-full object-cover ${videoSrc.endsWith(".mp4") ? "opacity-100" : "opacity-60"}`}
         >
-            <source src="/assets/background.webm" type="video/mp4" />
+            <source
+                src={videoSrc}
+                type={`video/${videoSrc.endsWith(".mp4") ? "mp4" : "webm"}`}
+            />
             <track kind="captions" />
             Your browser does not support the video tag.
         </video>
