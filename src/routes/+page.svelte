@@ -1,8 +1,9 @@
 <script lang="ts">
     import { onMount } from "svelte";
-    import Profile from "../lib/Profile.svelte";
-    import Location from "../lib/Location.svelte";
-    import Progres from "../lib/Progres.svelte";
+    import Profile from "$lib/Profile.svelte";
+    import Location from "$lib/Location.svelte";
+    import Progres from "$lib/Progres.svelte";
+    import TheArt from "$lib/TheArt.svelte";
 
     let audio: HTMLAudioElement;
 
@@ -34,6 +35,7 @@
 
 <div class="flex flex-col gap-4">
     <Location />
+    <TheArt />
     <Profile />
     <Progres />
 </div>
