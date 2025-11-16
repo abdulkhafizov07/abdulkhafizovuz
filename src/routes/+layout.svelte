@@ -1,39 +1,20 @@
 <script lang="ts">
-    import { afterUpdate, onMount } from "svelte";
+    import { onMount } from "svelte";
 
     import "../app.css";
 
     export let data;
     const meta = data.meta;
 
-    let videoSrc = "/assets/background.webm";
-    let videoEl: HTMLVideoElement | null = null;
-
-    function updateThemeMedia(e?: MediaQueryListEvent) {
-        const isDark = e
-            ? e.matches
-            : window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-        videoSrc = isDark
-            ? "/assets/background.webm"
-            : "/assets/background-light.mp4";
-    }
-
     onMount(() => {
-        const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-        mediaQuery.addEventListener("change", updateThemeMedia);
+        const mainLoader = document.getElementById("main-loader");
 
-        updateThemeMedia();
-
-        return () => {
-            mediaQuery.removeEventListener("change", updateThemeMedia);
-        };
-    });
-
-    afterUpdate(() => {
-        if (videoEl) {
-            videoEl.load();
-        }
+        setTimeout(() => {
+            if (mainLoader) {
+                mainLoader.style.opacity = "0";
+                mainLoader.style.visibility = "hidden";
+            }
+        }, 1800);
     });
 </script>
 
@@ -170,39 +151,9 @@
 
 <div
     id="main-loader"
-    class="fixed top-0 left-0 w-full h-screen flex items-center justify-center bg-white dark:bg-black z-99"
+    class="fixed top-0 left-0 w-full h-screen flex items-center justify-center bg-white dark:bg-black z-99 transition-all duration-200 ease-in"
 >
     <div class="loader dark:dark"></div>
 </div>
 
-<div id="page">
-    <div
-        class="flex w-full h-screen items-center justify-center bg-white dark:bg-black overflow-hidden"
-        id="background"
-    >
-        <video
-            bind:this={videoEl}
-            autoplay
-            loop
-            muted
-            playsinline
-            preload="auto"
-            class={`w-full h-full object-cover ${videoSrc.endsWith(".mp4") ? "opacity-100" : "opacity-60"}`}
-        >
-            <source
-                src={videoSrc}
-                type={`video/${videoSrc.endsWith(".mp4") ? "mp4" : "webm"}`}
-            />
-            <track kind="captions" />
-            Your browser does not support the video tag.
-        </video>
-    </div>
-
-    <div
-        class="fixed top-0 left-0 w-full max-h-screen overflow-y-auto py-12 z-10"
-    >
-        <div id="container" class="mx-auto p-4">
-            <slot />
-        </div>
-    </div>
-</div>
+<slot />

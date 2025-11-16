@@ -1,10 +1,7 @@
 @import "tailwindcss";
 @plugin '@tailwindcss/typography';
-@plugin "daisyui";
-
-#container {
-    max-width: 720px;
-    width: 100%;
+@plugin "daisyui" {
+    themes: light --default, dark --prefersdark, cupcake;
 }
 
 @theme {

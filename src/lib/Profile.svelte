@@ -17,7 +17,7 @@
             >
                 <div class="w-42 rounded-2xl">
                     <img
-                        src="/assets/pfp.jpg"
+                        src="/assets/index/pfp.jpg"
                         alt="Telegram profile"
                         class="w-full h-full object-cover"
                     />
@@ -32,14 +32,16 @@
                 </h1>
 
                 <div class="mb-4">
-                    <p class="text-zinc-700 dark:text-zinc-300">I am from mars.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">
+                        I am from mars.
+                    </p>
                 </div>
 
                 <div class="mb-2">
                     <h3
                         class="text-zinc-500 group-hover:text-zinc-600 dark:group-hover:text-zinc-400 font-medium tracking-wider transition-colors duration-200 ease-in"
                     >
-                        🇺🇸 USA &#x2022; 🇺🇿 Uzbekistan
+                        United States &#x2022; Japan
                     </h3>
                 </div>
 
@@ -49,7 +51,7 @@
                         aria-label="Telegram account"
                         target="_blank"
                         rel="noopener norefferer"
-                        class="link dark:link-info flex gap-x-1 items-center transition-colors duration-200 ease-in"
+                        class="link dark:link-white flex gap-x-1 items-center transition-colors duration-200 ease-in"
                     >
                         <span class="icon"><SiTelegram size={16} /></span>
                         <span class="text">Telegram</span></a
@@ -59,7 +61,7 @@
                         aria-label="Telegram account"
                         target="_blank"
                         rel="noopener norefferer"
-                        class="link dark:link-info flex gap-x-1 items-center transition-colors duration-200 ease-in"
+                        class="link dark:link-white flex gap-x-1 items-center transition-colors duration-200 ease-in"
                     >
                         <span class="icon"><SiInstagram size={16} /></span>
                         <span class="text">Instagram</span></a
@@ -69,7 +71,7 @@
                         aria-label="Telegram account"
                         target="_blank"
                         rel="noopener norefferer"
-                        class="link dark:link-info flex gap-x-1 items-center transition-colors duration-200 ease-in"
+                        class="link dark:link-white flex gap-x-1 items-center transition-colors duration-200 ease-in"
                     >
                         <span class="icon"><SiDiscord size={16} /></span>
                         <span class="text">Discord</span></a
@@ -79,7 +81,7 @@
                         aria-label="Telegram account"
                         target="_blank"
                         rel="noopener norefferer"
-                        class="link dark:link-info flex gap-x-1 items-center transition-colors duration-200 ease-in"
+                        class="link dark:link-white flex gap-x-1 items-center transition-colors duration-200 ease-in"
                     >
                         <span class="icon"><SiGithub size={16} /></span>
                         <span class="text">GitHub</span></a
