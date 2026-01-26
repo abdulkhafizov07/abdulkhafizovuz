@@ -1,0 +1,1 @@
+ALTER TABLE "entry_record" ALTER COLUMN "guid" SET DEFAULT gen_random_uuid();
