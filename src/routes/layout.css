@@ -1,2 +1,27 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 @plugin '@tailwindcss/typography';
+
+@theme {
+    --font-lexend-deca: "Lexend Deca", sans-serif;
+
+    --animate-tree-motion-profile-card-966634ebf2fc135707d6753692bf4b1e: TreeMotionProfileCard_966634ebf2fc135707d6753692bf4b1e
+        5s ease-in-out infinite;
+
+    @keyframes TreeMotionProfileCard_966634ebf2fc135707d6753692bf4b1e {
+        0% {
+            transform: rotate(0deg);
+        }
+        28% {
+            transform: rotate(12deg);
+        }
+        58% {
+            transform: rotate(8deg);
+        }
+        78% {
+            transform: rotate(18deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+}

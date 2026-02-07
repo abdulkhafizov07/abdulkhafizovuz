@@ -25,6 +25,7 @@
 		"@tailwindcss/typography": "^0.5.19",
 		"@tailwindcss/vite": "^4.1.17",
 		"@types/node": "^22",
+		"@types/three": "^0.182.0",
 		"drizzle-kit": "^0.31.8",
 		"drizzle-orm": "^0.45.0",
 		"eslint": "^9.39.1",
@@ -39,6 +40,9 @@
 	},
 	"dependencies": {
 		"@sveltejs/adapter-node": "^5.5.2",
-		"postgres": "^3.4.7"
+		"@threlte/core": "^8.3.1",
+		"@threlte/extras": "^9.7.1",
+		"postgres": "^3.4.7",
+		"three": "^0.182.0"
 	}
 }

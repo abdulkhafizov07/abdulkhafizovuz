@@ -1,18 +1,26 @@
 <script lang="ts">
     import "./layout.css";
-    import favicon from "$lib/assets/favicon.svg";
     import { _metadata } from "./+layout";
 </script>
 
 <svelte:head>
-    <link rel="icon" href={favicon} />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
     <title>{_metadata.title}</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin="anonymous"
+    />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap"
+        rel="stylesheet"
+    />
 </svelte:head>
 
-<div
-    class="fixed bottom-4 left-4 right-4 bg-black border-2 border-gray-400 p-4 text-white rounded-xl"
->
-    <p>Under development. Please, check out next time</p>
-</div>
-
-<div class="w-full h-screen bg-black"><slot /></div>
+<slot />
