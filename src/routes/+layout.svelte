@@ -18,7 +18,7 @@
         crossorigin="anonymous"
     />
     <link
-        href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap"
         rel="stylesheet"
     />
 </svelte:head>

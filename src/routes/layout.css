@@ -3,6 +3,7 @@
 
 @theme {
     --font-lexend-deca: "Lexend Deca", sans-serif;
+    --font-suse-mono: "SUSE Mono", sans-serif;
 
     --animate-tree-motion-profile-card-966634ebf2fc135707d6753692bf4b1e: TreeMotionProfileCard_966634ebf2fc135707d6753692bf4b1e
         5s ease-in-out infinite;
