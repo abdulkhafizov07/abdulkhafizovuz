@@ -2,6 +2,7 @@
     import GlassyBackground from "../../components/966634ebf2fc135707d6753692bf4b1e/GlassyBackground.svelte";
     import Profile from "../../components/966634ebf2fc135707d6753692bf4b1e/Profile.svelte";
     import Quotes from "../../components/966634ebf2fc135707d6753692bf4b1e/Quotes.svelte";
+    import SocialMedias from "../../components/966634ebf2fc135707d6753692bf4b1e/SocialMedias.svelte";
     import Technologies from "../../components/966634ebf2fc135707d6753692bf4b1e/Technologies.svelte";
 </script>
 
@@ -23,7 +24,7 @@
         <div
             class="col-span-6 order-3 md:col-span-4 lg:order-2 xl:col-span-3 xl:order-3 2xl:col-span-2 row-span-2"
         >
-            <GlassyBackground></GlassyBackground>
+            <GlassyBackground><SocialMedias /></GlassyBackground>
         </div>
     </div>
 </div>

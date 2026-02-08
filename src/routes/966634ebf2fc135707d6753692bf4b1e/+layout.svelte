@@ -1,3 +1,8 @@
+<script>
+    import { Canvas } from "@threlte/core";
+    import Scene from "../../components/966634ebf2fc135707d6753692bf4b1e/BackgroundEffect/Scene.svelte";
+</script>
+
 <svelte:head>
     <link
         rel="preload"
@@ -20,5 +25,11 @@
     data-server-ip="13.231.231.161"
     data-server-password="unhackablepass1234"
 >
-    <slot />
+    <div class="fixed top-0 left-0 w-full h-screen z-10">
+        <Canvas autoRender={false}>
+            <Scene />
+        </Canvas>
+    </div>
+
+    <div class="relative h-full w-full z-11"><slot /></div>
 </div>

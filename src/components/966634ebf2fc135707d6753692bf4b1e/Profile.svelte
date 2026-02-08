@@ -4,7 +4,7 @@
 
 <GlassyBackground>
     <div
-        class="relative w-full h-full flex items-center justify-center gap-4 p-4 select-none"
+        class="relative w-full h-full flex items-center justify-center gap-4 p-4 select-none group"
     >
         <img
             src="/assets/images/966634ebf2fc135707d6753692bf4b1e/optimized/cherry-blossom.webp"
@@ -20,9 +20,17 @@
                 class="object-fit rounded-3xl"
             />
         </div>
+
+        <img
+            src="/assets/images/966634ebf2fc135707d6753692bf4b1e/statue-of-liberty.png"
+            alt=""
+            loading="eager"
+            class="absolute bottom-0 right-0 h-7/8 -z-10 pointer-events-none saturate-75 opacity-65 group-hover:opacity-100 group-hover:saturate-100 group-hover:h-full transition-all duration-150 ease-in"
+        />
+
         <div class="w-full h-full data py-4">
             <h1
-                class="text-2xl text-gray-400 hover:text-gray-200 font-lexend-deca font-semibold uppercase mb-2 transition-colors duration-100 ease-in"
+                class="text-2xl text-gray-400 group-hover:text-gray-200 font-lexend-deca font-semibold uppercase mb-2 transition-colors duration-100 ease-in"
             >
                 Jasurbek Abdulkhafizov
             </h1>
@@ -51,12 +59,5 @@
                 </span>
             </div>
         </div>
-
-        <img
-            src="/assets/images/966634ebf2fc135707d6753692bf4b1e/optimized/sakura-tree.webp"
-            alt=""
-            loading="eager"
-            class="absolute bottom-5 right-0 w-14 -z-10 pointer-events-none origin-[98%_62%] animate-tree-motion-profile-card-966634ebf2fc135707d6753692bf4b1e"
-        />
     </div>
 </GlassyBackground>
